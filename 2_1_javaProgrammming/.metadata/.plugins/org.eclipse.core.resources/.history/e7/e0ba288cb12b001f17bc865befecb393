@@ -1,0 +1,7 @@
+package Chapter4_Class_Static_Final;
+
+public class GarbageEx {
+	public static void main(String[] args) {
+		
+	}
+}

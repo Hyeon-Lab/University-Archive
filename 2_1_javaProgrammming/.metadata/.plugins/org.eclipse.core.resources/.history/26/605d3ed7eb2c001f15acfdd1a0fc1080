@@ -1,0 +1,34 @@
+package Chapter6_Wrapper_String_StringBuffer_Token;
+
+class BasicMath{
+	public static double sum(double a, double b) {return a + b;}
+	public static double sub(double a, double b) {return a - b;}
+	public double mul(double a, double b) {return a * b;}
+}
+
+class Basic2Math{
+	private double a; private double b;
+	public Basic2Math(double a, double b) {
+		this.a = a; this.b = b;
+	}
+	public void setA(double a) {
+		this.a = a;
+	}
+	public void setB(double b) {
+		this.b = b;
+	}
+	public double sum() {
+		return BasicMath.sum(a, b);
+	}
+	public double sub() {
+		return BasicMath.sub(a, b);
+	}
+	public double mul() {
+		BasicMath m = new BasicMath();
+		return m.mul(a, b);
+	}
+}
+
+public class ex01 {
+
+}

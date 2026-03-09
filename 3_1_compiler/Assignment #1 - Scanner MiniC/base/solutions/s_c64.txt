@@ -1,0 +1,78 @@
+********** MiniC Compiler **********
+Lexical Analysis ...
+token1.kind = Token.FLOATLITERAL
+token1.lexeme = "3.14"
+token1.src_pos.StartLine = 1
+token1.src_pos.EndLine = 1
+token1.src_pos.StartCol = 1
+token1.src_pos.EndCol = 4
+
+token2.kind = Token.ID
+token2.lexeme = "e"
+token2.src_pos.StartLine = 1
+token2.src_pos.EndLine = 1
+token2.src_pos.StartCol = 5
+token2.src_pos.EndCol = 5
+
+token3.kind = Token.ERROR
+token3.lexeme = "."
+token3.src_pos.StartLine = 2
+token3.src_pos.EndLine = 2
+token3.src_pos.StartCol = 1
+token3.src_pos.EndCol = 1
+
+token4.kind = Token.ID
+token4.lexeme = "e"
+token4.src_pos.StartLine = 2
+token4.src_pos.EndLine = 2
+token4.src_pos.StartCol = 2
+token4.src_pos.EndCol = 2
+
+token5.kind = Token.PLUS
+token5.lexeme = "+"
+token5.src_pos.StartLine = 2
+token5.src_pos.EndLine = 2
+token5.src_pos.StartCol = 3
+token5.src_pos.EndCol = 3
+
+token6.kind = Token.INTLITERAL
+token6.lexeme = "12345"
+token6.src_pos.StartLine = 2
+token6.src_pos.EndLine = 2
+token6.src_pos.StartCol = 4
+token6.src_pos.EndCol = 8
+
+token7.kind = Token.FLOATLITERAL
+token7.lexeme = "123.e+321"
+token7.src_pos.StartLine = 3
+token7.src_pos.EndLine = 3
+token7.src_pos.StartCol = 1
+token7.src_pos.EndCol = 9
+
+token8.kind = Token.FLOATLITERAL
+token8.lexeme = "123.45"
+token8.src_pos.StartLine = 4
+token8.src_pos.EndLine = 4
+token8.src_pos.StartCol = 1
+token8.src_pos.EndCol = 6
+
+token9.kind = Token.ID
+token9.lexeme = "e"
+token9.src_pos.StartLine = 4
+token9.src_pos.EndLine = 4
+token9.src_pos.StartCol = 7
+token9.src_pos.EndCol = 7
+
+token10.kind = Token.MINUS
+token10.lexeme = "-"
+token10.src_pos.StartLine = 4
+token10.src_pos.EndLine = 4
+token10.src_pos.StartCol = 8
+token10.src_pos.EndCol = 8
+
+token11.kind = Token.EOF
+token11.lexeme = "$"
+token11.src_pos.StartLine = 5
+token11.src_pos.EndLine = 5
+token11.src_pos.StartCol = 1
+token11.src_pos.EndCol = 1

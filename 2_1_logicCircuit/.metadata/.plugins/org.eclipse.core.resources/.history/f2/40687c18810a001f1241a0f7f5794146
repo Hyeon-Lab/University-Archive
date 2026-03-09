@@ -1,0 +1,212 @@
+package HW2;
+
+import java.util.*;
+
+public class HW2 {
+	private int numVariables;
+    private List<Integer> minterms;
+    private List<Integer> dontCareTerms;
+    private List<List<String>> primeImplicants;
+    private List<String> essentialPrimeImplicants;
+    private Set<String> minimizedTerms;
+
+    public QuineMcCluskey() {
+        getInput();
+        primeImplicants = getPrimeImplicants();
+        findEssentialPrimeImplicants();
+        petricksMethod();
+    }
+
+    private void getInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of variables: ");
+        numVariables = scanner.nextInt();
+
+        minterms = new ArrayList<Integer>();
+        System.out.print("Enter minterm numbers (-1 for end): ");
+        int minterm;
+        while ((minterm = scanner.nextInt()) != -1) {
+            minterms.add(minterm);
+        }
+
+        dontCareTerms = new ArrayList<Integer>();
+        System.out.print("Enter don't-care term numbers (-1 for end): ");
+        int dontCareTerm;
+        while ((dontCareTerm = scanner.nextInt()) != -1) {
+            dontCareTerms.add(dontCareTerm);
+        }
+    }
+
+    private String intToBinary(int num) {
+        StringBuilder binary = new StringBuilder(Integer.toBinaryString(num));
+        while (binary.length() < numVariables) {
+            binary.insert(0, "0");
+        }
+        return binary.toString();
+    }
+
+    private int countOnes(String term) {
+        int count = 0;
+        for (char c : term.toCharArray()) {
+            if (c == '1')
+                count++;
+        }
+        return count;
+    }
+
+    private boolean isAdjacent(String term1, String term2) {
+        int diffCount = 0;
+        for (int i = 0; i < term1.length(); i++) {
+            if (term1.charAt(i) != term2.charAt(i)) {
+                diffCount++;
+                if (diffCount > 1)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    private List<String> combineTerms(List<String> terms) {
+        List<String> combinedTerms = new ArrayList<String>();
+        for (int i = 0; i < terms.size(); i++) {
+            for (int j = i + 1; j < terms.size(); j++) {
+                if (isAdjacent(terms.get(i), terms.get(j))) {
+                    StringBuilder combinedTerm = new StringBuilder(terms.get(i));
+                    for (int k = 0; k < combinedTerm.length(); k++) {
+                        if (combinedTerm.charAt(k) != terms.get(j).charAt(k)) {
+                            combinedTerm.setCharAt(k, '-');
+                        }
+                    }
+                    combinedTerms.add(combinedTerm.toString());
+                }
+            }
+        }
+        return combinedTerms;
+    }
+
+    private List<List<String>> getPrimeImplicants() {
+        List<List<String>> primeImplicants = new ArrayList<ArrayList<String>>();
+        List<String> initialTerms = new ArrayList<String>();
+        for (int minterm : minterms) {
+            initialTerms.add(intToBinary(minterm));
+        }
+        for (int dontCareTerm : dontCareTerms) {
+            initialTerms.add(intToBinary(dontCareTerm));
+        }
+        primeImplicants.add(initialTerms);
+
+        while (true) {
+            List<String> combinedTerms = combineTerms(primeImplicants.get(primeImplicants.size() - 1));
+            if (combinedTerms.isEmpty())
+                break;
+            primeImplicants.add(combinedTerms);
+        }
+        return primeImplicants;
+    }
+
+    private void findEssentialPrimeImplicants() {
+        boolean[] covered = new boolean[minterms.size()];
+        Arrays.fill(covered, false);
+
+        essentialPrimeImplicants = new ArrayList<String>();
+        for (int i = 0; i < minterms.size(); i++) {
+            int minterm = minterms.get(i);
+            for (int j = 0; j < primeImplicants.size(); j++) {
+                if (Collections.frequency(primeImplicants.get(j), intToBinary(minterm)) == 1) {
+                    essentialPrimeImplicants.add(primeImplicants.get(j).get(0));
+                    primeImplicants.get(j).removeIf(term -> !term.equals(intToBinary(minterm)));
+                    covered[i] = true;
+                    break;
+                }
+            }
+        }
+
+        for (int i = 0; i < minterms.size(); i++) {
+            if (!covered[i]) {
+                StringBuilder term = new StringBuilder();
+                for (int j = numVariables - 1; j >= 0; j--) {
+                    term.append('-');
+                }
+                minimizedTerms.add(term.toString());
+            }
+        }
+    }
+
+    private void petricksMethod() {
+        List<Set<Integer>> primeImplicantsIndices = new ArrayList<HashSet<Integer>>();
+        for (List<String> primeImplicant : primeImplicants) {
+            Set<Integer> indices = new HashSet<Integer>();
+            for (int j = 0; j < primeImplicant.size(); j++) {
+                for (int k = 0; k < minterms.size(); k++) {
+                    if (intToBinary(minterms.get(k)).equals(primeImplicant.get(j))) {
+                        indices.add(k);
+                    }
+                }
+            }
+            primeImplicantsIndices.add(indices);
+        }
+
+        Set<Integer> result = primeImplicantsIndices.get(0);
+        for (int i = 1; i < primeImplicantsIndices.size(); i++) {
+            Set<Integer> newResult = new HashSet<Integer>();
+            newResult.addAll(result);
+            newResult.addAll(primeImplicantsIndices.get(i));
+            result = newResult;
+        }
+
+        List<String> terms = new ArrayList<String>();
+        for (int termIndex : result) {
+            terms.add(intToBinary(minterms.get(termIndex)));
+        }
+        minimizedTerms.addAll(terms);
+    }
+
+    private void printPrimeImplicants() {
+        System.out.println("Prime Implicants Chart:");
+        for (int i = 0; i < primeImplicants.size(); i++) {
+            System.out.print("PI" + i + ": ");
+            for (String term : primeImplicants.get(i)) {
+                System.out.print(term + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private void printEssentialPrimeImplicants() {
+        System.out.print("Essential Prime Implicants: ");
+        for (String term : essentialPrimeImplicants) {
+            System.out.print(term + " ");
+        }
+        System.out.println();
+    }
+
+    private void printMinimizedTerms() {
+        System.out.print("Minimum Sum-of-Product: F = ");
+        int count = 0;
+        for (String term : minimizedTerms) {
+            count++;
+            for (int i = 0; i < term.length(); i++) {
+                if (term.charAt(i) == '0') {
+                    System.out.print((char) ('A' + i) + "'");
+                } else if (term.charAt(i) == '1') {
+                    System.out.print((char) ('A' + i));
+                }
+            }
+            if (count < minimizedTerms.size()) {
+                System.out.print(" + ");
+            }
+        }
+        System.out.println();
+    }
+
+    public void printResult() {
+        printPrimeImplicants();
+        printEssentialPrimeImplicants();
+        printMinimizedTerms();
+    }
+
+    public static void main(String[] args) {
+        QuineMcCluskey qm = new QuineMcCluskey();
+        qm.printResult();
+    }
+}

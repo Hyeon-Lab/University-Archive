@@ -1,0 +1,50 @@
+********** MiniC Compiler **********
+Lexical Analysis ...
+token1.kind = Token.FLOAT
+token1.lexeme = "float"
+token1.src_pos.StartLine = 1
+token1.src_pos.EndLine = 1
+token1.src_pos.StartCol = 1
+token1.src_pos.EndCol = 5
+
+token2.kind = Token.ID
+token2.lexeme = "b"
+token2.src_pos.StartLine = 1
+token2.src_pos.EndLine = 1
+token2.src_pos.StartCol = 7
+token2.src_pos.EndCol = 7
+
+token3.kind = Token.ASSIGN
+token3.lexeme = "="
+token3.src_pos.StartLine = 1
+token3.src_pos.EndLine = 1
+token3.src_pos.StartCol = 9
+token3.src_pos.EndCol = 9
+
+token4.kind = Token.FLOATLITERAL
+token4.lexeme = "0."
+token4.src_pos.StartLine = 1
+token4.src_pos.EndLine = 1
+token4.src_pos.StartCol = 11
+token4.src_pos.EndCol = 12
+
+token5.kind = Token.ID
+token5.lexeme = "e"
+token5.src_pos.StartLine = 1
+token5.src_pos.EndLine = 1
+token5.src_pos.StartCol = 13
+token5.src_pos.EndCol = 13
+
+token6.kind = Token.SEMICOLON
+token6.lexeme = ";"
+token6.src_pos.StartLine = 1
+token6.src_pos.EndLine = 1
+token6.src_pos.StartCol = 14
+token6.src_pos.EndCol = 14
+
+token7.kind = Token.EOF
+token7.lexeme = "$"
+token7.src_pos.StartLine = 2
+token7.src_pos.EndLine = 2
+token7.src_pos.StartCol = 1
+token7.src_pos.EndCol = 1

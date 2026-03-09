@@ -1,0 +1,77 @@
+
+module MyComparatorBeh(A_lt_B, A_gt_B, A_eq_B, A, B, CLK, nRST);
+
+input [3:0] A, B;
+input CLK, nRST;
+output A_lt_B, A_gt_B, A_eq_B;
+reg A_lt_B, A_gt_B, A_eq_B;
+
+always @(posedge CLK or negedge nRST)
+begin
+    if(!nRST)
+    begin
+        A_lt_B = 1'b0;
+        A_gt_B = 1'b0;
+        A_eq_B = 1'b0;
+    end
+    else
+        if(A<B) 
+        begin
+            A_lt_B = 1'b1;
+            A_gt_B = 1'b0;
+            A_eq_B = 1'b0;
+        end
+        else if(A>B)
+        begin
+            A_lt_B = 1'b0;
+            A_gt_B = 1'b1;
+            A_eq_B = 1'b0;
+        end
+        else if(A==B)
+        begin
+            A_lt_B = 1'b0;
+            A_gt_B = 1'b0;
+            A_eq_B = 1'b1;
+        end
+end
+    
+
+endmodule
+
+module Top;
+
+reg [3:0]a, b;
+reg clk, nrst;
+wire a_lt_b, a_gt_b, a_eq_b;
+
+MyComparatorBeh mycomparatorbeh(.A_lt_B(a_lt_b), .A_gt_B(a_gt_b), .A_eq_B(a_eq_b), .A(a), .B(b), .CLK(clk), .nRST(nrst));
+
+initial 
+      $monitor($time, " A = %h, B = %h, A_lt_B = %b, A_gt_B = %b, A_eq_B = %b", a, b, a_lt_b, a_gt_b, a_eq_b);
+
+initial
+begin
+    clk = 1'b0;
+    forever #5 clk = ~clk;
+end
+    
+initial
+begin
+    nrst = 1'b0;
+    @(negedge clk); nrst = ~nrst;
+end
+
+initial
+begin
+    a = 4'h0; b = 4'h1;
+     @(negedge clk); a = 4'hf; b = 4'h3;
+     @(negedge clk); a = 4'ha; b = 4'hb;
+     @(negedge clk); a = 4'h0; b = 4'h0;
+     @(negedge clk); a = 4'h7; b = 4'hd;
+     @(negedge clk); a = 4'h9; b = 4'h9;
+     @(negedge clk); $stop;
+end
+
+endmodule
+
+

@@ -1,0 +1,15 @@
+package Chapter6_Wrapper_String_StringBuffer_Token;
+
+class Point2{
+	private int x, y;
+	public Point2(int x, int y) {
+		this.x = x; this.y = y;
+	}
+	public String toString() {
+		return "Point(" + x + ", " + y + ")";
+	}
+}
+
+public class ToStringEx {
+
+}

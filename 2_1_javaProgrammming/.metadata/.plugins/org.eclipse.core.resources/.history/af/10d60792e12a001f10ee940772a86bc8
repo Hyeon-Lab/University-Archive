@@ -1,0 +1,7 @@
+package Chapter2_Var_If_Scanner;
+
+public class LogicalOperator {
+	public static void main(String[] args) {
+		
+	}
+}

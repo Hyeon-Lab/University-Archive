@@ -1,0 +1,127 @@
+********** MiniC Compiler **********
+Lexical Analysis ...
+token1.kind = Token.ID
+token1.lexeme = "the"
+token1.src_pos.StartLine = 1
+token1.src_pos.EndLine = 1
+token1.src_pos.StartCol = 1
+token1.src_pos.EndCol = 3
+
+token2.kind = Token.ASSIGN
+token2.lexeme = "="
+token2.src_pos.StartLine = 1
+token2.src_pos.EndLine = 1
+token2.src_pos.StartCol = 23
+token2.src_pos.EndCol = 23
+
+token3.kind = Token.INTLITERAL
+token3.lexeme = "42"
+token3.src_pos.StartLine = 1
+token3.src_pos.EndLine = 1
+token3.src_pos.StartCol = 24
+token3.src_pos.EndCol = 25
+
+token4.kind = Token.SEMICOLON
+token4.lexeme = ";"
+token4.src_pos.StartLine = 1
+token4.src_pos.EndLine = 1
+token4.src_pos.StartCol = 26
+token4.src_pos.EndCol = 26
+
+token5.kind = Token.IF
+token5.lexeme = "if"
+token5.src_pos.StartLine = 2
+token5.src_pos.EndLine = 2
+token5.src_pos.StartCol = 1
+token5.src_pos.EndCol = 2
+
+token6.kind = Token.LEFTPAREN
+token6.lexeme = "("
+token6.src_pos.StartLine = 2
+token6.src_pos.EndLine = 2
+token6.src_pos.StartCol = 4
+token6.src_pos.EndCol = 4
+
+token7.kind = Token.ID
+token7.lexeme = "dreams"
+token7.src_pos.StartLine = 2
+token7.src_pos.EndLine = 2
+token7.src_pos.StartCol = 5
+token7.src_pos.EndCol = 10
+
+token8.kind = Token.EQ
+token8.lexeme = "=="
+token8.src_pos.StartLine = 2
+token8.src_pos.EndLine = 2
+token8.src_pos.StartCol = 12
+token8.src_pos.EndCol = 13
+
+token9.kind = Token.ASSIGN
+token9.lexeme = "="
+token9.src_pos.StartLine = 2
+token9.src_pos.EndLine = 2
+token9.src_pos.StartCol = 14
+token9.src_pos.EndCol = 14
+
+token10.kind = Token.STRINGLITERAL
+token10.lexeme = "are messages"
+token10.src_pos.StartLine = 2
+token10.src_pos.EndLine = 2
+token10.src_pos.StartCol = 16
+token10.src_pos.EndCol = 29
+
+token11.kind = Token.STRINGLITERAL
+token11.lexeme = "from the deep"
+token11.src_pos.StartLine = 2
+token11.src_pos.EndLine = 2
+token11.src_pos.StartCol = 30
+token11.src_pos.EndCol = 44
+
+token12.kind = Token.RIGHTPAREN
+token12.lexeme = ")"
+token12.src_pos.StartLine = 2
+token12.src_pos.EndLine = 2
+token12.src_pos.StartCol = 45
+token12.src_pos.EndCol = 45
+
+token13.kind = Token.LEFTBRACE
+token13.lexeme = "{"
+token13.src_pos.StartLine = 2
+token13.src_pos.EndLine = 2
+token13.src_pos.StartCol = 46
+token13.src_pos.EndCol = 46
+
+token14.kind = Token.RETURN
+token14.lexeme = "return"
+token14.src_pos.StartLine = 3
+token14.src_pos.EndLine = 3
+token14.src_pos.StartCol = 3
+token14.src_pos.EndCol = 8
+
+token15.kind = Token.ID
+token15.lexeme = "Arrakis"
+token15.src_pos.StartLine = 3
+token15.src_pos.EndLine = 3
+token15.src_pos.StartCol = 10
+token15.src_pos.EndCol = 16
+
+token16.kind = Token.SEMICOLON
+token16.lexeme = ";"
+token16.src_pos.StartLine = 3
+token16.src_pos.EndLine = 3
+token16.src_pos.StartCol = 17
+token16.src_pos.EndCol = 17
+
+token17.kind = Token.RIGHTBRACE
+token17.lexeme = "}"
+token17.src_pos.StartLine = 4
+token17.src_pos.EndLine = 4
+token17.src_pos.StartCol = 1
+token17.src_pos.EndCol = 1
+
+token18.kind = Token.EOF
+token18.lexeme = "$"
+token18.src_pos.StartLine = 5
+token18.src_pos.EndLine = 5
+token18.src_pos.StartCol = 1
+token18.src_pos.EndCol = 1

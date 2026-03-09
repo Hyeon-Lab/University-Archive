@@ -1,0 +1,18 @@
+package Chapter12_Thread_Synchronized_Wait;
+
+public class ex01 {
+	public static void main(String[] args) {
+		for(int i=0;i<100;i++) {
+			for(char ch = 'A';ch<='z';ch++) {
+				System.out.print(ch);
+			}
+			System.out.println();
+		}
+		
+		for(int i=1;i<1000;i++) {
+			System.out.print(i);
+			if(i%10 == 0) System.out.println();
+			else System.out.print("\t");
+		}
+	}
+}

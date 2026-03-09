@@ -1,0 +1,8 @@
+package Chapter8_Gui_Swing_Layout;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class ex02 {
+
+}

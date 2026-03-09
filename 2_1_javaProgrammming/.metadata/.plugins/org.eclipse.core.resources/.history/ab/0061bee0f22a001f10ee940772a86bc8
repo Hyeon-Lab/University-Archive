@@ -1,0 +1,11 @@
+package Chapter2_Var_If_Scanner;
+
+public class BitShiftOperator {
+	public static void main(String args) {
+		short a = (short)0x55ff;
+		short b = (short)0x00ff;
+		
+		System.out.println("[비트 연산 결과]");
+		System.out.printf("%04x\n", (short)(a & b));
+	}
+}

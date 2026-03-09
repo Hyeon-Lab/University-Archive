@@ -1,0 +1,21 @@
+package Chapter13_File_FileInput_Stream_InputStreamReader;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class ex01 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String src = scanner.next();
+		try {
+			Scanner s = new Scanner(new FileReader(src));
+			while(s.hasNext()) {
+				 String line = s.nextLine();
+				 System.out.println(line);
+			}	
+		}
+		catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+}

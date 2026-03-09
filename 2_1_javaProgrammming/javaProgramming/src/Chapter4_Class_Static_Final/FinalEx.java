@@ -1,0 +1,28 @@
+package Chapter4_Class_Static_Final;
+//final class - 상속 x
+//final method - overriding x
+//final static - 초기값 지정, 변경 x
+
+final class FinalClass{
+	//상속 x
+	//class DerivedClass extends FinalClass{}; -> 에러발생
+}
+
+class SuperClass{
+	protected final int finalMethod() {return 1;}
+}
+
+class SubClass extends SuperClass{
+	//overriding x
+	//protected int finalMethod() {return 1;} -> 에러발생
+}
+
+
+public class FinalEx {
+	final int ROWS = 10;
+	
+	void f() {
+		int [] intArray = new int [ROWS];
+		//ROWS = 30; -> 에러 발생
+	}
+}

@@ -1,0 +1,88 @@
+
+module BCDtoDecimalBeh(DECOut, BCDIn, CLK, nRST);
+
+input [3:0] BCDIn;
+input CLK, nRST;
+output [9:0] DECOut;
+reg [9:0] DECOut;
+
+always @(posedge CLK or negedge nRST)
+begin
+    if(!nRST)
+        DECOut = 10'b0000000000;
+    else
+        if(BCDIn == 4'b0000)
+            DECOut = 10'b0000000001;
+        else if(BCDIn == 4'b0001)
+            DECOut = 10'b0000000010;
+        else if(BCDIn == 4'b0010)
+            DECOut = 10'b0000000100;
+        else if(BCDIn == 4'b0011)
+            DECOut = 10'b0000001000;
+        else if(BCDIn == 4'b0100)
+            DECOut = 10'b0000010000;
+        else if(BCDIn == 4'b0101)
+            DECOut = 10'b0000100000;
+        else if(BCDIn == 4'b0110)
+            DECOut = 10'b0001000000;
+        else if(BCDIn == 4'b0111)
+            DECOut = 10'b0010000000;
+        else if(BCDIn == 4'b1000)
+            DECOut = 10'b0100000000;
+        else if(BCDIn == 4'b1001)
+            DECOut = 10'b1000000000;
+        else
+            DECOut = 10'b0000000000;
+end
+    
+
+endmodule
+
+module Top;
+
+reg [3:0]bcdin;
+reg clk, nrst;
+wire [9:0] decout;
+
+BCDtoDecimalBeh bcdtodecimal(.DECOut(decout), .BCDIn(bcdin), .CLK(clk), .nRST(nrst));
+
+initial 
+      $monitor($time, " BCDIn = %d --> DECOut = %b", bcdin, decout);
+
+initial
+begin
+    clk = 1'b0;
+    forever #5 clk = ~clk;
+end
+    
+initial
+begin
+    nrst = 1'b0;
+    @(negedge clk); nrst = ~nrst;
+end
+
+initial
+begin
+    bcdin = 0;
+     @(negedge clk); bcdin = 1;
+     @(negedge clk); bcdin = 2;
+     @(negedge clk); bcdin = 3;
+     @(negedge clk); bcdin = 4;
+     @(negedge clk); bcdin = 5;
+     @(negedge clk); bcdin = 6;
+     @(negedge clk); bcdin = 7;
+     @(negedge clk); bcdin = 8;
+     @(negedge clk); bcdin = 9;
+     @(negedge clk); bcdin = 10;
+     @(negedge clk); bcdin = 11;
+     @(negedge clk); bcdin = 12;
+     @(negedge clk); bcdin = 13;
+     @(negedge clk); bcdin = 14;
+     @(negedge clk); bcdin = 15;
+     @(negedge clk); bcdin = 0;
+     @(negedge clk); $stop;
+end
+
+endmodule
+
+

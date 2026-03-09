@@ -1,0 +1,13 @@
+{
+    "address": {
+        "zip": "12345",
+        "city": "서울"
+    },
+    "hobbies": [
+        "reading",
+        "swimming"
+    ],
+    "name": "홍길동",
+    "age": 28,
+    "spouse": false
+}

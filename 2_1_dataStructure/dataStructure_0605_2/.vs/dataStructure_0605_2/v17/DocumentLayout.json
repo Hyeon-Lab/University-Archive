@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|solutionrelative:dataStructure_0605_2\\2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|solutionrelative:dataStructure_0605_2\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BD4EF627-4167-40CD-9822-41129B3AFAA7}|dataStructure_0605_2\\dataStructure_0605_2.vcxproj|solutionrelative:dataStructure_0605_2\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "output.txt",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\output.txt",
+              "RelativeDocumentMoniker": "dataStructure_0605_2\\output.txt",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\output.txt",
+              "RelativeToolTip": "dataStructure_0605_2\\output.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-05T10:27:37.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "input.txt",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\input.txt",
+              "RelativeDocumentMoniker": "dataStructure_0605_2\\input.txt",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\input.txt",
+              "RelativeToolTip": "dataStructure_0605_2\\input.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-05T10:27:31.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2.c",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\2.c",
+              "RelativeDocumentMoniker": "dataStructure_0605_2\\2.c",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0605_2\\dataStructure_0605_2\\2.c",
+              "RelativeToolTip": "dataStructure_0605_2\\2.c",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-05T10:24:06.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

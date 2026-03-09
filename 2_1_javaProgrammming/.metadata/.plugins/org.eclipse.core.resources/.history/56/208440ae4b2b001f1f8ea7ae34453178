@@ -1,0 +1,9 @@
+package Chapter4_Class_Static_Final;
+
+public class RectApp {
+	int width;
+	int height;
+	public int getArea() {
+		return width * height;
+	}
+}

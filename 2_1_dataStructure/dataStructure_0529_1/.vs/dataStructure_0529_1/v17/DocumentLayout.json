@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02C4C334-8639-492F-ACB5-D705845095D5}|dataStructure_0529_1\\dataStructure_0529_1.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02C4C334-8639-492F-ACB5-D705845095D5}|dataStructure_0529_1\\dataStructure_0529_1.vcxproj|solutionrelative:dataStructure_0529_1\\1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02C4C334-8639-492F-ACB5-D705845095D5}|dataStructure_0529_1\\dataStructure_0529_1.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{02C4C334-8639-492F-ACB5-D705845095D5}|dataStructure_0529_1\\dataStructure_0529_1.vcxproj|solutionrelative:dataStructure_0529_1\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "input.txt",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\input.txt",
+              "RelativeDocumentMoniker": "dataStructure_0529_1\\input.txt",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\input.txt",
+              "RelativeToolTip": "dataStructure_0529_1\\input.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-29T06:27:40.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "1.c",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\1.c",
+              "RelativeDocumentMoniker": "dataStructure_0529_1\\1.c",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0529_1\\dataStructure_0529_1\\1.c",
+              "RelativeToolTip": "dataStructure_0529_1\\1.c",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-05-29T06:27:14.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+package Chapter3_Repeat_Array_Try;
+
+import java.util.Scanner;
+
+public class ex02 {
+	public static void main(String[] args) {
+		String day[] = {"일","월","화","수","목","금","토"};
+		
+		Scanner s = new Scanner(System.in);
+		while(true) {
+			System.out.print("정수를 입력하세요 >> ");
+			int search = -1;
+			try{
+				search = s.nextInt();
+			}catch(Exception e) {
+				s.next();
+				System.out.println("정수를 입력하지 않았습니다~~~");
+				
+			}
+			if(search <0) {
+				System.out.println("프로그램을 종료합니다....");
+				break;
+			}
+			else {
+				System.out.println(day[search%7]);
+			}
+		}
+	}
+}

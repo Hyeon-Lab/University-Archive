@@ -1,0 +1,43 @@
+package Chapter9_EventListener_Adapter_Key_Mouse;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class ex02 extends JFrame{
+	public ex02() {
+		setTitle("ex02");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container c = getContentPane();
+		c.setLayout(new FlowLayout());
+		
+		JButton b1 = new JButton("Button1");
+		JButton b2 = new JButton("Button2");
+		
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "You Pressed : " + e.getActionCommand());	
+			}
+		});
+		
+		b2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "You Pressed : " + e.getActionCommand());	
+			}
+		});
+		
+		c.add(b1);
+		c.add(b2);
+		
+		setSize(300, 300);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new ex02();
+	}
+}

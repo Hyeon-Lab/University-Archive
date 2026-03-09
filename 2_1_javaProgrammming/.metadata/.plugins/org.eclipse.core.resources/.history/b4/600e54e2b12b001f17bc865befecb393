@@ -1,0 +1,11 @@
+package Chapter4_Class_Static_Final;
+
+class Sample {
+	public int a;
+	private int b;
+	int c;
+}
+
+public class AccessEx {
+
+}

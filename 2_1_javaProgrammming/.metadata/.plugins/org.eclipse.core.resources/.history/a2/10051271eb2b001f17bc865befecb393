@@ -1,0 +1,12 @@
+package Chapter6_Wrapper_String_StringBuffer_Token;
+
+class Point {
+	private int x, y;
+	public Point(int x, int y) {
+		this.x = x; this.y = y;
+	}
+}
+
+public class ObjectPropertyEx {
+
+}

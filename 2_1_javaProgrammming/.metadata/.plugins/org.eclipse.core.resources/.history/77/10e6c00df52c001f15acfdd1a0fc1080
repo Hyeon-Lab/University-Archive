@@ -1,0 +1,38 @@
+package Chapter7_Vector_ArrayList_HashMap_Iterator_Generic;
+
+import java.util.*;
+import java.util.concurrent.Flow.Publisher;
+
+class Library{
+	String name;
+	String publisher;
+	int year;
+	public Library(String name, String publisher, int year) {
+		this.name = name; this.publisher = publisher; this.year = year;
+	}
+}
+
+public class ex02 {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		ArrayList<Library> a = new ArrayList<Library> ();
+		int n;
+		String name;
+		String publisher;
+		int year;
+		while(true) {
+			System.out.print("삽입:1, 삭제:2, 찾기:3, 전체:4, 종료:5 -->");
+			n = s.nextInt();
+			switch(n) {
+			case 1:
+				System.out.print("책이름 -->> ");
+				name = s.next();
+				System.out.print("출판사 -->> ");
+				publisher = s.next();
+				System.out.print("년도 -->> ");
+				year = s.nextInt();
+				
+			}
+		}
+	}
+}

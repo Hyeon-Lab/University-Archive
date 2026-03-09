@@ -1,0 +1,34 @@
+drop table if exists career_path;
+drop table if exists eating_style;
+drop table if exists favorite_course;
+drop table if exists favorite_food;
+drop table if exists friend_info;
+drop table if exists mbti;
+drop table if exists preferred_pl;
+drop table if exists student;
+
+
+create table student (nickname varchar(20), section varchar(15),
+      primary key(nickname));
+
+create table career_path (nickname varchar(30), direction varchar(50), 
+  primary key(nickname), foreign key(nickname) references student(nickname) );
+
+create table eating_style (nickname varchar(30), source varchar(30), mint varchar(30), 
+  primary key(nickname), foreign key(nickname) references student(nickname) );
+
+create table favorite_course (nickname varchar(100), course varchar(100), 
+  foreign key (nickname) references student(nickname)  );
+
+create table favorite_food (nickname varchar(30), food varchar(30),
+  foreign key(nickname) references student(nickname) );
+
+create table friend_info (nickname varchar(30), friend_nickname varchar(30),
+  foreign key(nickname) references student(nickname), foreign key(friend_nickname) references student(nickname) );
+
+create table mbti (nickname varchar(100), gender varchar(10), mbti_type varchar(4), 
+  primary key(nickname), foreign key (nickname) references student(nickname)  );
+
+create table preferred_pl (nickname varchar(30), lang varchar(30),
+  foreign key(nickname) references student(nickname) );
+

@@ -1,0 +1,9 @@
+package Chapter7_Vector_ArrayList_HashMap_Iterator_Generic;
+
+import java.util.*;
+
+public class ex01 {
+	public static void main(String[] args) {
+		ArrayList<String> a = new ArrayList<String>();
+	}
+}

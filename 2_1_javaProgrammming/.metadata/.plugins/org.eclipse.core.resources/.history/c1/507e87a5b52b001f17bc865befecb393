@@ -1,0 +1,15 @@
+package Chapter4_Class_Static_Final;
+//final class - 상속 x
+//final method - overriding x
+//final static - 초기값 지정, 변경 x
+
+
+
+public class FinalEx {
+	final int ROWS = 10;
+	
+	void f() {
+		int [] intArray = new int [ROWS];
+		//ROWS = 30; 에러 발생
+	}
+}

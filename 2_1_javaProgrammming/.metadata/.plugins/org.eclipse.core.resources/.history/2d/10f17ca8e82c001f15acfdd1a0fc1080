@@ -1,0 +1,13 @@
+package Chapter5_Extend_Override_Abstract_Interface;
+
+interface Payable{
+	String play();
+}
+
+abstract class Music{
+	String name, int year;
+}
+
+public class ex02 {
+
+}

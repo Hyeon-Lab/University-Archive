@@ -1,0 +1,27 @@
+package Chapter5_Extend_Override_Abstract_Interface;
+
+class MyPoint{
+	private int x, y;
+	protected MyPoint() {
+		x = 100; y = 200;
+	}
+	protected void disp() {
+		System.out.println("점(x, y) = (" + x + ", " + y + ")");
+	}
+}
+
+class MyCircle extends MyPoint{
+	int r;
+	public MyCircle(){
+		r = 50;
+	}
+	@Override
+	public void disp() {
+		super.disp();
+		System.out.println("반지름 r = " + r);
+	}
+}
+
+public class ex01 {
+
+}

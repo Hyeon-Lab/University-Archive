@@ -1,0 +1,38 @@
+package Chapter4_Class_Static_Final;
+
+public class Book2 {
+	private String title;
+	private String author;
+	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public Book2(String t) {
+		//this(title, "작자미상");
+		title = t; author = "작자미상";
+	}
+	
+	public Book2(String t, String a) {
+		title = t; author = a;
+	}
+	
+	public static void main(String[] args) {
+		Book2 littlePrince = new Book2("어린왕자", "생텍쥐페리");
+		Book2 loveStory = new Book2("춘향전");
+		System.out.println(littlePrince.getTitle() + " " + littlePrince.getAuthor());
+		System.out.println(loveStory.getTitle() + " " + loveStory.getAuthor());
+	}
+}

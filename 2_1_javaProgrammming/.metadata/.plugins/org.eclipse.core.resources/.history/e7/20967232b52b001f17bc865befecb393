@@ -1,0 +1,8 @@
+package Chapter4_Class_Static_Final;
+//final class - 상속 x
+//final method - overriding x
+//final static - 초기값 지정, 변경x
+
+public class FinalEx {
+
+}

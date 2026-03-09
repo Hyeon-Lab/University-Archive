@@ -1,0 +1,23 @@
+package Chapter6_Wrapper_String_StringBuffer_Token;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class ex02 {
+	public static void main(String args) {
+		System.out.println("tlwkr");
+		Scanner s = new Scanner(System.in);
+		
+		String string = s.nextLine();
+		
+		StringTokenizer tk = new StringTokenizer(string, "+");
+		int sum = 0;
+		int n=0;
+		while(tk.hasMoreTokens()) {
+			sum += Integer.parseInt(tk.nextToken().trim());
+			n++;
+		}
+		System.out.println("합 = " + sum + ", 평균 = " + sum/n);
+		s.close();
+	}
+}

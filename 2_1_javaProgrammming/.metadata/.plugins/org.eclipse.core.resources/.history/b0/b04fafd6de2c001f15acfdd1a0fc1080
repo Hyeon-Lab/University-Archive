@@ -1,0 +1,18 @@
+package Chapter2_Var_If_Scanner;
+
+import java.util.Scanner;
+
+public class ex02 {
+	public static void main(String[] args) {
+		System.out.println("커피 주문 히세요 >> ");
+		
+		Scanner s = new Scanner(System.in);
+		
+		String menu = s.next();
+		int num = s.nextInt();
+		
+		if(menu.equals("카푸치노")) {
+			System.out.println(3000 * num + "원 입니다.");
+		}
+	}
+}

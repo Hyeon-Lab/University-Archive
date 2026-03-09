@@ -1,0 +1,51 @@
+module BCDtoDecimal(DECOut, BCDIn);
+
+input [3:0] BCDIn;
+output [9:0] DECOut;
+
+assign DECOut = (BCDIn == 4'b0000) ? 10'b0000000001 :
+(BCDIn == 4'b0001) ? 10'b0000000010 :
+(BCDIn == 4'b0010) ? 10'b0000000100 :
+(BCDIn == 4'b0011) ? 10'b0000001000 :
+(BCDIn == 4'b0100) ? 10'b0000010000 :
+(BCDIn == 4'b0101) ? 10'b0000100000 :
+(BCDIn == 4'b0110) ? 10'b0001000000 :
+(BCDIn == 4'b0111) ? 10'b0010000000 :
+(BCDIn == 4'b1000) ? 10'b0100000000 :
+(BCDIn == 4'b1001) ? 10'b1000000000 : 10'b1111111111;
+
+endmodule
+
+module Top;
+
+wire [9:0] decout;
+reg [3:0] bcdin;
+
+BCDtoDecimal bcdtodecimal(.DECOut(decout), .BCDIn(bcdin));
+  initial 
+    begin
+      $monitor($time, " BCDIN = %d --> DECOut = %b", bcdin, decout);
+    end
+    
+initial
+begin
+bcdin = 0;
+#10 bcdin = 1;
+#10 bcdin = 2;
+#10 bcdin = 3;
+#10 bcdin = 4;
+#10 bcdin = 5;
+#10 bcdin = 6;
+#10 bcdin = 7;
+#10 bcdin = 8;
+#10 bcdin = 9;
+#10 bcdin = 10;
+#10 bcdin = 11;
+#10 bcdin = 12;
+#10 bcdin = 13;
+#10 bcdin = 14;
+#10 bcdin = 15;
+#10 bcdin = 0;
+end
+
+endmodule

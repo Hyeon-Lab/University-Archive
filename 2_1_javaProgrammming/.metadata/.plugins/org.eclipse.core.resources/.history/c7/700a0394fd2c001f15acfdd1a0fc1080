@@ -1,0 +1,15 @@
+package Chapter12_Thread_Synchronized_Wait;
+
+public class ex02 {
+	public static void main(String[] args) {
+		ex02_Calculator calculator = new ex02_Calculator();
+		
+		ex02_User1 u = new ex02_User1();
+		u.setCalculator(calculator);
+		u.start();
+		
+		ex02_User2 u2 = new ex02_User2();
+		u.setCalculator(calculator);
+		u.start();
+	}
+}

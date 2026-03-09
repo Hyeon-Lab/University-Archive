@@ -1,0 +1,15 @@
+package Chapter2_Var_If_Scanner;
+
+import java.util.Scanner;
+
+public class Grading {
+	public static void main(String[] args) {
+		char grade;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("점수를 닙력하세요(0 ~ 100) : ");
+		int score = scanner.nextInt();
+		if(score >= 90)
+			grade = 'A';
+	}
+}

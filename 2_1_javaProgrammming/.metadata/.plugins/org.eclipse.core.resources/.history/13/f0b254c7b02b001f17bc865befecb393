@@ -1,0 +1,11 @@
+package Chapter4_Class_Static_Final;
+
+public class ArrayParameter {
+	static void replaceSpace(char a[]) {
+		for(int i=0;i<a.length;i++) {
+			if(a[i] == ' ') {
+				a[i] = ',';
+			}
+		}
+	}
+}

@@ -1,0 +1,237 @@
+--   For Project2   --
+drop table if exists my_board;
+create table my_board (id INT auto_increment, nickname varchar(30),
+mytext varchar(1000), primary key(id));
+
+
+
+-- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
+--
+-- Host: localhost    Database: week10_11
+-- ------------------------------------------------------
+-- Server version	8.0.20
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `career_path`
+--
+
+DROP TABLE IF EXISTS `career_path`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `career_path` (
+  `nickname` varchar(30) NOT NULL,
+  `direction` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`nickname`),
+  CONSTRAINT `career_path_ibfk_1` FOREIGN KEY (`nickname`) REFERENCES `student` (`nickname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `career_path`
+--
+
+LOCK TABLES `career_path` WRITE;
+/*!40000 ALTER TABLE `career_path` DISABLE KEYS */;
+INSERT INTO `career_path` VALUES ('0000','Undecided'),('0o0','Government/Public Corp. Jobs'),('2171','Undecided'),('Apple','Government/Public Corp. Jobs'),('apt','Miscellaneous'),('baebulru','Government/Public Corp. Jobs'),('burtsbee','Government/Public Corp. Jobs'),('carl','Big Company'),('cat','Government/Public Corp. Jobs'),('chimchakman','Government/Public Corp. Jobs'),('churaly','Undecided'),('claude','Big Company'),('coolkid','Government/Public Corp. Jobs'),('damee','Undecided'),('daniel','Startup'),('DBeaver_s Friend','Startup'),('des','Government/Public Corp. Jobs'),('dogo','Government/Public Corp. Jobs'),('dulgi','Big Company'),('El Patrón','Big Company'),('fischbrotchenlover','Big Company'),('gamza','Government/Public Corp. Jobs'),('Gregor','Big Company'),('gu','Government/Public Corp. Jobs'),('haha','Government/Public Corp. Jobs'),('HAPPY','Big Company'),('haruki','Startup'),('hck','Academia/Graduate School'),('hcseo','Academia/Graduate School'),('hebi','Big Company'),('hey','Academia/Graduate School'),('hihi','Academia/Graduate School'),('hmm','Big Company'),('hyons','Government/Public Corp. Jobs'),('ild','Academia/Graduate School'),('int','Big Company'),('Iphone','Academia/Graduate School'),('jeju','Government/Public Corp. Jobs'),('jelly','Academia/Graduate School'),('jhoon5024','Miscellaneous'),('jid','Undecided'),('John Doe','Government/Public Corp. Jobs'),('jun','Big Company'),('just do it','Big Company'),('keephun','Big Company'),('kjh','Academia/Graduate School'),('ksmini','Academia/Graduate School'),('ksw','Big Company'),('kthgiraffe','Government/Public Corp. Jobs'),('lccert','Big Company'),('MA','Undecided'),('matilda','Big Company'),('matt','Big Company'),('meat','Big Company'),('minseo','Undecided'),('nevergiveup','Academia/Graduate School'),('nzn','Undecided'),('oui','Big Company'),('pdap','Undecided'),('podkeke','Undecided'),('pol','Big Company'),('ponaidhean','Big Company'),('prof','Academia/Graduate School'),('Rezulu','Undecided'),('ronnie_colman','Academia/Graduate School'),('seongjin','Undecided'),('sh','Government/Public Corp. Jobs'),('sissela','Academia/Graduate School'),('snine990','Big Company'),('ssan','Government/Public Corp. Jobs'),('stu','Government/Public Corp. Jobs'),('student','Government/Public Corp. Jobs'),('student_23','Academia/Graduate School'),('Symonds','Big Company'),('tgds03','Big Company'),('thunther','Big Company'),('tls','Big Company'),('tomato','Undecided'),('tsmu','Academia/Graduate School'),('Um','Startup'),('vimisbesteditor','Government/Public Corp. Jobs'),('willow','Undecided'),('YDHyeop','Big Company'),('yole','Big Company'),('yongs','Government/Public Corp. Jobs'),('yoon','Government/Public Corp. Jobs'),('yunu','Undecided'),('경북대_렌치돌리개','Big Company'),('금이','Big Company'),('기니','Undecided'),('대효기','Undecided'),('명이','Big Company'),('섭이','Academia/Graduate School'),('이쁘니','Big Company'),('잼롸잍','Big Company'),('저녁햄버거','Academia/Graduate School'),('진주','Undecided'),('집도리','Big Company'),('천상천하유아독존','Big Company'),('쾌변의화신','Undecided'),('페이','Academia/Graduate School'),('푸짐이','Government/Public Corp. Jobs'),('햄부기','Government/Public Corp. Jobs'),('헤이원','Big Company');
+/*!40000 ALTER TABLE `career_path` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `eating_style`
+--
+
+DROP TABLE IF EXISTS `eating_style`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `eating_style` (
+  `nickname` varchar(30) NOT NULL,
+  `sauce` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `mint` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`nickname`),
+  CONSTRAINT `eating_style_ibfk_1` FOREIGN KEY (`nickname`) REFERENCES `student` (`nickname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `eating_style`
+--
+
+LOCK TABLES `eating_style` WRITE;
+/*!40000 ALTER TABLE `eating_style` DISABLE KEYS */;
+INSERT INTO `eating_style` VALUES ('0000','Dip Sauce','Yes'),('0o0','Dip Sauce','No'),('2171','Dip Sauce','No'),('Apple','Dip Sauce','No'),('apt','Both','No'),('baebulru','Pour Sauce','Yes'),('burtsbee','Dip Sauce','No'),('carl','Both','Yes'),('cat','Dip Sauce','No'),('chimchakman','Dip Sauce','Yes'),('churaly','Both','Yes'),('claude','Dip Sauce','Yes'),('coolkid','Dip Sauce','No'),('damee','Both','Yes'),('daniel','Both','No'),('DBeaver_s Friend','Both','Yes'),('des','Both','Yes'),('dogo','Dip Sauce','No'),('El Patrón','Dip Sauce','No'),('fischbrotchenlover','Both','Yes'),('gamza','Dip Sauce','Yes'),('Gregor','Both','Yes'),('gu','Both','No'),('haha','Both','Yes'),('HAPPY','Both','Yes'),('haruki','Both','Yes'),('hck','Dip Sauce','No'),('hcseo','Both','No'),('hebi','Both','No'),('hey','Dip Sauce','Yes'),('hihi','Both','Yes'),('hmm','Both','Yes'),('hyons','Both','Yes'),('ild','Both','Yes'),('int','Dip Sauce','No'),('Iphone','Dip Sauce','No'),('jeju','Both','No'),('jelly','Both','Yes'),('jhoon5024','Dip Sauce','Yes'),('jid','Pour Sauce','No'),('John Doe','Both','Yes'),('jun','Dip Sause','No'),('just do it','Both','No'),('keephun','Dip Sauce','No'),('kjh','Dip Sauce','Yes'),('ksmini','Both','Yes'),('ksw','Pour Sauce','No'),('kthgiraffe','Both','No'),('lccert','Both','No'),('MA','Dip Sauce','No'),('matilda','Dip Sauce','Yes'),('matt','Dip Sauce','Yes'),('meat','Both','No'),('minseo','Both','Yes'),('nevergiveup','Dip Sauce','Yes'),('nzn','Pour Sauce','No'),('oui','Both','No'),('pdap','Both','Yes'),('podkeke','Both','No'),('pol','Both','No'),('ponaidhean','Both','Yes'),('prof','Both','Yes'),('Rezulu','Both','No'),('seongjin','Pour Sauce','Yes'),('sh','Both','No'),('sissela','Both','No'),('snine990','Dip Sauce','No'),('ssan','Both','Yes'),('stu','Dip Sauce','Yes'),('student','Both','No'),('student_23','Dip Sauce','No'),('testcon','Both','Yes'),('tgds03','Dip Sauce','No'),('thunther','NA','NA'),('tls','Both','No'),('tomato','Both','Yes'),('tsmu','Both','No'),('Um','Both','Yes'),('vimisbesteditor','Both','Yes'),('willow','Both','No'),('YDHyeop','Dip Sauce','No'),('yole','Both','No'),('yongs','Both','Yes'),('yoon','Both','No'),('yunu','Both','No'),('경북대_렌치돌리개','Both','Yes'),('금이','Pour Sauce','No'),('기니','Dip Sauce','No'),('대효기','Dip Sauce','No'),('명이','Dip Sauce','Yes'),('섭이','Both','Yes'),('이쁘니','Both','Yes'),('잼롸잍','Both','Yes'),('저녁햄버거','Both','Yes'),('진주','Dip Sauce','Yes'),('집도리','Both','Yes'),('천상천하유아독존','Both','No'),('쾌변의화신','Both','Yes'),('페이','Both','No'),('푸짐이','Pour Sauce','No'),('햄부기','Dip Sauce','Yes'),('헤이원','Dip Sauce','No');
+/*!40000 ALTER TABLE `eating_style` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `favorite_course`
+--
+
+DROP TABLE IF EXISTS `favorite_course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `favorite_course` (
+  `nickname` varchar(100) DEFAULT NULL,
+  `course` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `favorite_course`
+--
+
+LOCK TABLES `favorite_course` WRITE;
+/*!40000 ALTER TABLE `favorite_course` DISABLE KEYS */;
+INSERT INTO `favorite_course` VALUES ('prof','PL'),('prof','AI'),('apt','IR'),('just do it','AI'),('pol','AI'),('ronnie_colman','PL'),('Haruki','DB'),('Haruki','AI'),('YDHyeop','DB'),('YDHyeop','AP'),('DBeaver_s Friend','AI'),('cat','DB'),('진주','DB'),('daniel','DB'),('ild','AI'),('apt','DM'),('baebulru','DB'),('2171','AI'),('ksmini','CA'),('haha','DB'),('daniel','DS'),('daniel','Algorithm'),('jhoon5024','DB'),('jhoon5024','OS'),('hck','Java'),('hck','AI'),('meat','DB'),('meat','Java'),('Gregor','DB'),('nevergiveup','SE'),('nevergiveup','AI'),('hcseo','Security'),('hcseo','Cloud Computing'),('햄부기','CA'),('hyons','PS'),('hyons','C++'),('kthgiraffe','AI'),('kthgiraffe','DB'),('kthgiraffe','Algorithm'),('푸짐이','DB'),('int','Algorithm'),('int','AI'),('coolkid','DB'),('DBeaver_s Friend','Java'),('yole','DB'),('jid','Algorithm'),('HAPPY','AI'),('jeju','DB'),('S','Java'),('yunu','DB'),('yunu','Mobile Programming'),('S','DB'),('sissela','AI'),('쾌변의화신','PL'),('쾌변의화신','AI'),('기니','OS'),('keephun','DB'),('기니','CA'),('nzn','DB'),('gamza','DB'),('gamza','AI'),('sh','DB'),('천상천하유아독존','Security'),('damee','DB'),('hmm','DB'),('jun','AI'),('student_23','AI'),('tomato','AI'),('tomato','DB'),('stu','OS'),('seongjin','PL'),('chimchakman','DB'),('chimchakman','OS'),('carl','DB'),('carl','DS'),('matt','Security'),('matt','Automatic Control'),('matt','DB'),('yongs','DB'),('페이','Algorithm'),('Symonds','HCI'),('John Doe','DB'),('El Patrón','DB'),('dulgi','DS'),('vimisbesteditor','AI'),('0o0','OS'),('0o0','SP'),('fischbrotchenlover','DB'),('fischbrotchenlover','AI'),('vimisbesteditor','DB'),('hihi','AI'),('ksw','DB'),('ponaidhean','OS'),('집도리','PL'),('dogo','DB'),('dogo','DS'),('집도리','OS'),('경북대_렌치돌리개','OS'),('경북대_렌치돌리개','DB'),('maeng','Quantum'),('tsmu','DB'),('ssan','Sleep'),('저녁햄버거','AI'),('lccert','DB'),('lccert','AI'),('testcon','Communication'),('oui','Security'),('dulgi','Communication'),('burtsbee','DB'),('ssan','DB'),('0000','Math'),('tls','CG'),('burtsbee','AI'),('yoon','DB'),('집도리','Algorithm'),('oui','HCI'),('thunther','Algorithm'),('thunther','AI'),('yoon','MATH'),('oui','DB'),('Iphone','CA'),('des','Algorithm'),('des','DB'),('churaly','OS'),('tgds03','OS'),('tgds03','DS'),('0000','Golf'),('MA','AI'),('MA','DB'),('Iphone','CapstoneDesign'),('Iphone','LogicCircuit'),('섭이','PL'),('섭이','AI'),('snine990','CG'),('명이','AI'),('대효기','AI'),('kjh','Algorithm'),('Rezulu','AI'),('Rezulu','DB'),('kjh','IR'),('kjh','SP'),('kjh','Automata'),('kjh','Compiler'),('ksw','Algorithm'),('Um','CG'),('Um','OS'),('willow','PL'),('willow','AI'),('snine990','Mobile Programming'),('HAPPY','DB'),('잼롸잍','AI'),('hebi','AI'),('hebi','DB'),('금이','AI'),('금이','PL'),('gu','DB'),('gu','OS'),('DBeaver_s Friend','misc.'),('matilda','OS'),('matilda','DB'),('podkeke','PL'),('podkeke','AI'),('HAPPY','misc.'),('ponaidhean','misc.'),('hey','OS'),('hey','CA'),('jelly','DB'),('zro','DB'),('minseo','DB'),('Apple','AI'),('student','DB'),('헤이원','AI'),('ronnie_colman','DB'),('thunther','Al'),('claude','DB'),('claude','OS'),('쾌변의화신','DB');
+/*!40000 ALTER TABLE `favorite_course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `favorite_food`
+--
+
+DROP TABLE IF EXISTS `favorite_food`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `favorite_food` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `food` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `favorite_food`
+--
+
+LOCK TABLES `favorite_food` WRITE;
+/*!40000 ALTER TABLE `favorite_food` DISABLE KEYS */;
+INSERT INTO `favorite_food` VALUES ('prof','Chicken'),('prof','삼겹살'),('Gregor','김치볶음밥'),('Gregor','샤브샤브'),('hcseo','Chicken'),('nzn','마라탕'),('nzn','Chicken'),('student_23','마라탕'),('student_23','회'),('gamza','Chicken'),('hyons','포케'),('hyons','김치찌개'),('sissela','Chicken'),('gu','Chicken'),('gu','삼겹살'),('YDHyeop','Chicken'),('jhoon5024','순대'),('기니','Sushi'),('기니','떡볶이'),('cat','Meat'),('cat','소금빵'),('ild','Chicken'),('ild','Pizza'),('ild','Pasta'),('haha','떡볶이'),('kthgiraffe','Chicken'),('just do it','Chicken'),('just do it','Steak'),('ksmini','Pizza'),('jid','Chicken'),('진주','마라샹궈'),('진주','Sushi'),('천상천하유아독존','Chicken'),('haruki','Chicken'),('prof','회'),('yunu','Chicken'),('yunu','삼겹살'),('yole','???'),('meat','Meat'),('prof','Burger'),('nevergiveup','Chicken'),('nevergiveup','Steak'),('coolkid','가리비구이'),('yole','회'),('푸짐이','Meat'),('int','Chicken'),('int','Pizza'),('int','마라샹궈'),('chimchakman','생선구이'),('2171','Chicken'),('stu','마라탕'),('stu','회'),('hck','삼겹살'),('hck','Icecream'),('damee','Pizza'),('hmm','Chicken'),('hmm','한식'),('DBeaver_s Friend','Meat'),('DBeaver_s Friend','Brocoli'),('keephun','찜닭'),('keephun','삼겹살'),('keephun','참치'),('apt','장어덮밥'),('apt','Sushi'),('pol','Chicken'),('podkeke','마라탕'),('podkeke','갈비탕'),('carl','Schnitzel'),('matt','Pizza'),('John Doe','Meat'),('John Doe','Sushi'),('yongs','Buritto'),('tsmu','짜장면'),('dulgi','Pizza'),('dulgi','Sushi'),('willow','Chicken'),('willow','떡볶이'),('burtsbee','Sushi'),('burtsbee','Chicken'),('ksw','김치찜'),('ksw','Chicken'),('집도리','Chicken'),('집도리','삼겹살'),('hihi','Chicken'),('hihi','삼겹살'),('Symonds','Chicken'),('Symonds','Pizza'),('Symonds','Sushi'),('Symonds','Meat'),('저녁햄버거','Burger'),('저녁햄버거','Chicken'),('MA','Pizza'),('MA','Chicken'),('churaly','떡볶이'),('churaly','막창'),('oui','Lasagna'),('oui','Pasta'),('lccert','Chicken'),('des','Chicken'),('pdap','김치찌개'),('ssan','Chicken'),('ssan','Burger'),('fischbrotchenlover','Sushi'),('fischbrotchenlover','Chicken'),('Um','Burger'),('dogo','라면'),('dogo','Curry'),('tgds03','Pizza'),('tgds03','Pasta'),('tgds03','Burger'),('0o0','Chicken'),('El Patrón','Burrito'),('0000','돈가스'),('0000','삼겹살'),('금이','Chicken'),('금이','라면'),('HAPPY','Chicken'),('vimisbesteditor','Pasta'),('vimisbesteditor','삼겹살'),('vimisbesteditor','샤브샤브'),('HAPPY','막창'),('yoon','삼겹살'),('잼롸잍','Chicken'),('잼롸잍','Pizza'),('Rezulu','Chicken'),('Rezulu','Sushi'),('maeng','Chicken'),('maeng','라면'),('hebi','Chicken'),('hebi','Meat'),('hey','Blueberry'),('snine990','삼겹살'),('snine990','Pizza'),('kjh','Chicken'),('kjh','제육볶음'),('kjh','돈가스'),('kjh','리조또'),('tls','볶음밥'),('tls','Burger'),('Iphone','Burger'),('Iphone','Chicken'),('Iphone','육회'),('Iphone','낙곱새'),('Iphone','물회'),('jelly','떡볶이'),('jelly','Chicken'),('섭이','Chicken'),('섭이','삼겹살'),('명이','Chicken'),('명이','Burger'),('명이','Pizza'),('jeju','연어'),('jeju','육회'),('HAPPY','김치'),('Apple','김치'),('baebulru','유부초밥'),('baebulru','제육볶음'),('이쁘니','치킨'),('이쁘니','떡볶이'),('jun','마라로제엽떡'),('student','Chicken'),('경북대_렌치돌리개','삼겹살'),('경북대_렌치돌리개','치킨'),('헤이원','Hamburger'),('sh','떡볶이'),('sh','떡볶이'),('seongjin','Sushi'),('seongjin','Burger'),('daniel','Pizza'),('daniel','Burger'),('matilda','Pasta'),('햄부기','hamburger'),('thunther','Chicken'),('claude','Chicken'),('claude','소고기'),('minseo','Salad'),('대효기','Chicken'),('tomato','쌀국수');
+/*!40000 ALTER TABLE `favorite_food` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `friend_info`
+--
+
+DROP TABLE IF EXISTS `friend_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `friend_info` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `friend_nickname` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `friend_info`
+--
+
+LOCK TABLES `friend_info` WRITE;
+/*!40000 ALTER TABLE `friend_info` DISABLE KEYS */;
+INSERT INTO `friend_info` VALUES ('prof','pdap'),('prof','경북대_렌치돌리개'),('prof','Um'),('gamza','jun'),('sissela','Haruki'),('sissela','prof'),('just do it','keephun'),('just do it','stu'),('YDHyeop','HAPPY'),('YDHyeop','ronnie_colman'),('YDHyeop','just do it'),('jid','ssan'),('hcseo','pdap'),('hcseo','경북대_렌치돌리개'),('hcseo','Um'),('기니','햄부기'),('hyons','HAPPY'),('hyons','just do it'),('gu','stu'),('ild','햄부기'),('ild','gamza'),('ild','jid'),('ild','hebi'),('ild','apt'),('ild','진주'),('ild','0o0'),('진주','tomato'),('haha','쾌변의화신'),('nevergiveup','쾌변의화신'),('nevergiveup','prof'),('nzn','prof'),('yunu','pdap'),('int','경북대_렌치돌리개'),('int','햄부기'),('meat','prof'),('haruki','sissela'),('student_23','prof'),('student_23','기니'),('student_23','daniel'),('Gregor','haruki'),('Gregor','ksmini'),('chimchakman','pdap'),('kthgiraffe','prof'),('stu','gu'),('stu','just do it'),('yole','ksmini'),('haruki','Gregor'),('ronnie_colman','pdap'),('ronnie_colman','경북대_렌치돌리개'),('ronnie_colman','Um'),('hck','gamza'),('hck','yunu'),('hck','gu'),('coolkid','푸짐이'),('2171','Um'),('천상천하유아독존','햄부기'),('cat','NothingBlack'),('cat','집도리'),('푸짐이','coolkid'),('DBeaver_s Friend','경북대_렌치돌리개'),('DBeaver_s Friend','dogo'),('hmm','prof'),('keephun','just do it'),('apt','gamza'),('apt','gu'),('apt','meat'),('pol','ronnie_colman'),('podkeke','pdap'),('podkeke','minseo'),('podkeke','meat'),('carl','matt'),('carl','El Patrón'),('matt','carl'),('matt','ronnie_colman'),('John Doe','cat'),('페이','jeju'),('pdap','prof'),('churaly','prof'),('dulgi','cat'),('dulgi','baebulru'),('dulgi','damee'),('fischbrotchenlover','prof'),('testcon','gu'),('HAPPY','prof'),('ponaidhean','prof'),('ksw','tls'),('ksw','HAPPY'),('burtsbee','glory'),('burtsbee','Um'),('willow','Um'),('저녁햄버거','집도리'),('저녁햄버거','잼롸잍'),('저녁햄버거','Um'),('vimisbesteditor','Gregor'),('vimisbesteditor','cat'),('0o0','0000'),('0o0','Um'),('Um','ssan'),('Um','dogo'),('oui','tgds03'),('oui','0000'),('oui','student_23'),('명이','금이'),('명이','섭이'),('tsmu','hck'),('El Patrón','cat'),('El Patrón','tomato'),('Symonds','Gregor'),('Symonds','just do it'),('Symonds','gu'),('MA','Apple'),('MA','dogo'),('집도리','pdap'),('집도리','Um'),('집도리','claude'),('tgds03','tgds03'),('des','Um'),('des','prof'),('tsmu','apt'),('lccert','햄부기'),('lccert','저녁햄버거'),('maeng','meat'),('dogo','jelly'),('dogo','dulgi'),('hihi','pdap'),('yoon','prof'),('hey','prof'),('섭이','금이'),('섭이','명이'),('Iphone','0000'),('Iphone','0o0'),('Iphone','haha'),('kjh','prof'),('snine990','prof'),('Rezulu','햄부기'),('Rezulu','just do it'),('Rezulu','기니'),('tls','hebi'),('tls','prof'),('금이','섭이'),('jelly','pdap'),('jelly','Um'),('jelly','경북대_렌치돌리개'),('금이','명이'),('잼롸잍','대효기'),('jeju','prof'),('jeju','페이'),('Apple','chimchakman'),('baebulru','경북대_렌치돌리개'),('이쁘니','Um'),('이쁘니','pdap'),('jun','gamza'),('student','이쁘니'),('경북대_렌치돌리개','천상천하유아독존'),('경북대_렌치돌리개','John Doe'),('경북대_렌치돌리개','저녁햄버거'),('yongs','prof'),('헤이원','ssan'),('헤이원','Um'),('sh','prof'),('seongjin','이쁘니'),('seongjin','student'),('daniel','prof'),('햄부기','푸짐이'),('thunther','prof'),('claude','pdap'),('claude','Apple'),('claude','Um'),('minseo','podkeke'),('minseo','prof'),('대효기','prof'),('tomato','sh'),('tomato','prof');
+/*!40000 ALTER TABLE `friend_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mbti`
+--
+
+DROP TABLE IF EXISTS `mbti`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `mbti` (
+  `nickname` varchar(100) NOT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `mbti_type` varchar(4) DEFAULT NULL,
+  PRIMARY KEY (`nickname`),
+  CONSTRAINT `mbti_ibfk_1` FOREIGN KEY (`nickname`) REFERENCES `student` (`nickname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mbti`
+--
+
+LOCK TABLES `mbti` WRITE;
+/*!40000 ALTER TABLE `mbti` DISABLE KEYS */;
+INSERT INTO `mbti` VALUES ('0000','female','INFJ'),('0o0','female','INFJ'),('2171','male','INFP'),('Apple','male','INTP'),('apt','male','ISTP'),('baebulru','female','ISFP'),('burtsbee','female','ISTJ'),('carl','male','ENTJ'),('cat','female','ISTJ'),('chimchakman','female','ISTP'),('churaly','female','ISFJ'),('claude','male','ESTP'),('coolkid','female','ISTJ'),('damee','male','INTP'),('daniel','male','INFJ'),('DBeaver_s Friend','male','INTP'),('des','male','INTP'),('dogo','female','ISFP'),('dulgi','female','INTJ'),('El Patrón','male','INTJ'),('fischbrotchenlover','male','INTJ'),('gamza','female','INTJ'),('Gregor','female','INFJ'),('gu','male','ESFJ'),('haha','male','INFJ'),('HAPPY','male','INTP'),('Haruki','male','INTJ'),('hck','male','ENTJ'),('hcseo','male','ISTP'),('hebi','male','INFJ'),('hey','female','INTJ'),('hihi','male','INTP'),('hmm','male','ISTJ'),('hyons','male','ENFJ'),('ild','male','ENTJ'),('int','male','INFP'),('Iphone','male','ENFJ'),('jeju','female','INFP'),('jelly','female','ESTP'),('jhoon5024','male','INFJ'),('jid','male','INFP'),('John Doe','male','INTJ'),('jun','female','ENTP'),('just do it','male','ENTJ'),('keephun','male','ESFP'),('kjh','male','INFP'),('ksmini','male','INTP'),('ksw','male','ISTP'),('kthgiraffe','male','INTP'),('lccert','male','ISTJ'),('MA','male','ENTJ'),('maeng','male','INFP'),('matilda','female','ISTP'),('matt','male','ESTJ'),('meat','male','ISFJ'),('minseo','female','ISTP'),('nevergiveup','male','ISFJ'),('nzn','female','INTP'),('oui','male','INTJ'),('pdap','male','INFP'),('podkeke','female','INTP'),('pol','male','ISTP'),('ponaidhean','male','INTJ'),('prof','male','INTJ'),('Rezulu','male','INFJ'),('ronnie_colman','male','ESTJ'),('S','female','INTJ'),('seongjin','male','INTP'),('sh','female','ISFJ'),('sissela','male','ISTJ'),('snine990','male','ESTP'),('ssan','male','ESFJ'),('stu','female','INTP'),('student','male','ISTP'),('student_23','female','ISTP'),('Symonds','male','INTJ'),('testcon','male','ISTP'),('tgds03','male','INFP'),('thunther','male','INTP'),('tls','male','INFJ'),('tomato','female','ISTJ'),('tsmu','male','ISFJ'),('Um','male','INFJ'),('vimisbesteditor','male','INTP'),('willow','male','INTJ'),('YDHyeop','male','INTJ'),('yole','male','INFJ'),('yongs','male','INTP'),('yoon','male','INFP'),('yunu','male','INTP'),('zro','female','ISTJ'),('경북대_렌치돌리개','male','INTP'),('금이','male','ENFJ'),('기니','female','ISTJ'),('대효기','male','ESFP'),('명이','male','ISTJ'),('섭이','male','ISFJ'),('이쁘니','female','ENTP'),('잼롸잍','male','ENFP'),('저녁햄버거','male','ISTP'),('진주','female','ISTP'),('집도리','male','ISFJ'),('천상천하유아독존','male','ENFJ'),('쾌변의화신','male','INFP'),('페이','male','INTJ'),('푸짐이','female','ENTP'),('햄부기','female','ENFJ'),('헤이원','female','ISFP');
+/*!40000 ALTER TABLE `mbti` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `preferred_pl`
+--
+
+DROP TABLE IF EXISTS `preferred_pl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `preferred_pl` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `lang` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `preferred_pl`
+--
+
+LOCK TABLES `preferred_pl` WRITE;
+/*!40000 ALTER TABLE `preferred_pl` DISABLE KEYS */;
+INSERT INTO `preferred_pl` VALUES ('prof','C++'),('prof','Java'),('prof','C'),('haha','C++'),('ksmini','Python'),('just do it','Java'),('just do it','Python'),('stu','Python'),('stu','C'),('hcseo','C'),('hcseo','Python'),('yole','Javascript'),('YDHyeop','C'),('YDHyeop','C++'),('Gregor','SQL'),('Gregor','C++'),('prof','Python'),('기니','C'),('jid','Python'),('haruki','Python'),('nzn','Python'),('student_23','C'),('student_23','Python'),('sissela','Python'),('gamza','Python'),('gamza','C'),('int','Java'),('int','Python'),('jhoon5024','Kotlin'),('hyons','C++'),('hyons','Python'),('gu','C'),('gu','Python'),('cat','Python'),('cat','C#'),('ild','C++'),('ild','Python'),('ild','Scala'),('kthgiraffe','Python'),('nevergiveup','C'),('nevergiveup','Java'),('진주','C'),('진주','Java'),('천상천하유아독존','Javascript'),('coolkid','Java'),('yunu','C++'),('yunu','Java'),('meat','Java'),('chimchakman','Python'),('2171','C'),('hck','Java'),('푸짐이','C'),('damee','Java'),('DBeaver_s Friend','C'),('DBeaver_s Friend','Python'),('hmm','C'),('hmm','C++'),('keephun','Java'),('keephun','Spring'),('keephun','MySQL'),('apt','C'),('apt','Python'),('pol','C'),('podkeke','Java'),('podkeke','Python'),('carl','Java'),('carl','Typescript'),('matt','C'),('matt','C#'),('John Doe','Python'),('John Doe','C++'),('yongs','C'),('yongs','misc.'),('HAPPY','C'),('pdap','C++'),('pdap','Python'),('tsmu','Javascript'),('dulgi','C++'),('dulgi','Python'),('willow','C++'),('willow','Python'),('MA','C#'),('burtsbee','Java'),('ksw','Python'),('ksw','Java'),('집도리','C++'),('집도리','Python'),('Symonds','Python'),('Symonds','Javascript'),('Symonds','C++'),('저녁햄버거','Python'),('저녁햄버거','C'),('churaly','C'),('oui','Python'),('oui','Java'),('lccert','Python'),('des','C'),('des','Python'),('ponaidhean','C++'),('ponaidhean','C'),('ssan','C++'),('ssan','Java'),('fischbrotchenlover','Java'),('fischbrotchenlover','Python'),('hihi','C++'),('hihi','Python'),('Um','C#'),('dogo','Python'),('dogo','C'),('tgds03','C++'),('tgds03','Python'),('tgds03','C#'),('0o0','Python'),('0o0','Java'),('El Patrón','C++'),('금이','C++'),('금이','C'),('maeng','Python'),('maeng','C'),('잼롸잍','Java'),('vimisbesteditor','Python'),('vimisbesteditor','C#'),('vimisbesteditor','Kotlin'),('yoon','C'),('Rezulu','Python'),('Rezulu','Java'),('hebi','C++'),('hebi','Python'),('hey','C'),('hey','Python'),('명이','C++'),('명이','Java'),('snine990','misc.'),('kjh','C++'),('kjh','Rust'),('kjh','Python'),('tls','C++'),('tls','C'),('대효기','Java'),('Iphone','Python'),('Iphone','C'),('Iphone','Java'),('jelly','Python'),('jelly','C'),('섭이','C++'),('섭이','Java'),('jeju','C++'),('jeju','Python'),('HAPPY','Python'),('Apple','Python'),('baebulru','C'),('baebulru','Java'),('이쁘니','Python'),('이쁘니','C'),('jun','C'),('student','C'),('경북대_렌치돌리개','Python'),('경북대_렌치돌리개','VB.NET'),('헤이원','Python'),('sh','Python'),('daniel','C'),('daniel','C#'),('matilda','Python'),('햄부기','C'),('thunther','C++'),('claude','java'),('claude','Python'),('minseo','Java'),('tomato','Python');
+/*!40000 ALTER TABLE `preferred_pl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `student` (
+  `nickname` varchar(20) NOT NULL,
+  `section` varchar(15) DEFAULT NULL,
+  `Sleep_duration` float DEFAULT NULL,
+  PRIMARY KEY (`nickname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student`
+--
+
+LOCK TABLES `student` WRITE;
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('0000','002',5.6),('0o0','002',5.2),('2171','003',5.6),('Apple','003',6),('apt','003',5.2),('baebulru','003',7.2),('burtsbee','002',7.2),('carl','002',5.6),('cat','003',5.2),('chimchakman','003',8.4),('churaly','002',6.8),('claude','002',6.4),('coolkid','003',6.8),('damee','003',6),('daniel','003',6.4),('DBeaver_s Friend','003',10.4),('des','002',5.2),('dogo','002',5.6),('dulgi','002',6),('El Patrón','002',8),('fischbrotchenlover','002',11.2),('gamza','003',6),('glory','002',6),('Gregor','003',6.4),('gu','003',4.8),('haha','003',5.6),('HAPPY','002',6),('Haruki','003',6.4),('hck','003',5.2),('hcseo','003',6),('hebi','002',5.6),('hey','002',5.2),('hihi','002',5.6),('hmm','003',5.2),('hyons','003',6),('ild','003',5.2),('int','003',5.2),('Iphone','002',6.4),('jeju','003',5.6),('jelly','002',6),('jhoon5024','003',7.6),('jid','003',5.2),('jml','003',5.2),('John Doe','002',7.2),('jun','003',5.2),('just do it','003',8),('keephun','003',6.8),('kjh','002',5.2),('knumal','003',6.4),('ksmini','003',6.4),('ksw','002',5.2),('kthgiraffe','003',8),('lccert','002',6.4),('MA','002',4.8),('maeng','002',6),('matilda','003',6.8),('matt','002',5.6),('meat','003',5.6),('minseo','003',6.4),('nevergiveup','003',8.4),('NothingBlack','002',8.8),('nzn','003',5.2),('oui','002',5.2),('pdap','002',5.6),('podkeke','003',6.8),('pol','003',5.2),('ponaidhean','002',8),('prof','003',5.6),('Rezulu','002',6.4),('ronnie_colman','003',9.2),('S','003',4.4),('seongjin','003',7.2),('sh','003',4.8),('sissela','003',6.8),('snine990','002',7.2),('ssan','002',5.6),('stu','003',5.2),('student','003',6.8),('student_23','003',8),('Symonds','002',6.8),('testcon','002',6.8),('tgds03','002',6.4),('thunther','002',7.2),('tls','002',5.2),('tomato','003',6.4),('tsmu','002',5.6),('Um','002',4.8),('vimisbesteditor','002',10),('willow','002',6.4),('YDHyeop','003',6.8),('yole','003',5.6),('yongs','002',6),('yoon','002',5.6),('yunu','003',5.6),('zro','003',5.2),('경북대_렌치돌리개','002',14),('금이','002',6.4),('기니','003',6.4),('대효기','002',7.6),('명이','002',6.4),('섭이','002',6.4),('이쁘니','003',7.6),('잼롸잍','002',7.6),('저녁햄버거','002',10),('진주','003',6.4),('집도리','002',7.6),('천상천하유아독존','003',13.6),('쾌변의화신','003',10),('페이','002',6.4),('푸짐이','003',7.6),('햄부기','003',7.6),('헤이원','002',7.6);
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-11-04 15:37:05
+
+
+
+create table new_student as
+select S.nickname, S.section, M.gender, M.mbti_type, C.direction,
+E.sauce, E.mint, S.sleep_duration
+from student S left join mbti M on S.nickname = M.nickname
+left join career_path C on S.nickname = C.nickname
+left join eating_style E on S.nickname = E.nickname

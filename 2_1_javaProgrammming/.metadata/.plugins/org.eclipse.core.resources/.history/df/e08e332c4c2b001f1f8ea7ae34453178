@@ -1,0 +1,15 @@
+package Chapter4_Class_Static_Final;
+
+import java.util.Scanner;
+
+class Rectangle {
+	int width;
+	int height;
+	public int getArea() {
+		return width * height;
+	}
+}
+
+public class RectApp {
+	
+}

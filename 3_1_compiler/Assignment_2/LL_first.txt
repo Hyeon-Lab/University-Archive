@@ -1,0 +1,50 @@
+    # FIRST(program) == "void", "int", "bool", "float"
+
+    # FIRST(funpart) == "("
+
+    # FIRST(varpart) == "[", "=", ",", ";"
+
+    # FIRST(variable-def) == "void", "int", "bool", "float"
+
+    # FIRST(initializer) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL", "{"
+
+    # FIRST(stmt) == "{", "if", "while", "for", "return", "ID"
+
+    # FIRST(expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(or-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(and-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(relational-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(add-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(mult-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(unary-expr) == "+", "-", "!", "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(primary-expr) == "ID", "(", "INTLITERAL", "BOOLLITERAL", "FLOATLITERAL", "STRINGLITERAL"
+
+    # FIRST(asgnexpr) == "ID"
+
+    # FIRST(params-list) == "void", "int", "bool", "float"
+
+    # FIRST(arglist) == "("
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

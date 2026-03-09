@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB8F5360-5085-4F37-8781-CB948B4F3A1F}|dataStructure_0603_1\\dataStructure_0603_1.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AB8F5360-5085-4F37-8781-CB948B4F3A1F}|dataStructure_0603_1\\dataStructure_0603_1.vcxproj|solutionrelative:dataStructure_0603_1\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB8F5360-5085-4F37-8781-CB948B4F3A1F}|dataStructure_0603_1\\dataStructure_0603_1.vcxproj|D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB8F5360-5085-4F37-8781-CB948B4F3A1F}|dataStructure_0603_1\\dataStructure_0603_1.vcxproj|solutionrelative:dataStructure_0603_1\\1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "1.c",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\1.c",
+              "RelativeDocumentMoniker": "dataStructure_0603_1\\1.c",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\1.c",
+              "RelativeToolTip": "dataStructure_0603_1\\1.c",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAgwNoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-03T06:14:01.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "output.txt",
+              "DocumentMoniker": "D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\output.txt",
+              "RelativeDocumentMoniker": "dataStructure_0603_1\\output.txt",
+              "ToolTip": "D:\\KNU\\2_1_dataStructure\\dataStructure_0603_1\\dataStructure_0603_1\\output.txt",
+              "RelativeToolTip": "dataStructure_0603_1\\output.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-03T05:53:32.962Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

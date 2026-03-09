@@ -1,0 +1,26 @@
+package Chapter5_Extend_Override_Abstract_Interface;
+
+interface Payable{
+	String play();
+}
+
+abstract class Music implements Payable{
+	String name; int year;
+	
+	Music(String name, int year){
+		this.name = name; this.year = year; 
+	}
+	String getName() {
+		return name;
+	}
+	int getYear() {
+		return year;
+	}
+	String print() {
+		return "곡명 = " + year + ", 연도 = " + name;
+	}
+}
+
+public class ex02 {
+
+}

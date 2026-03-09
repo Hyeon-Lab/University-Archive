@@ -1,0 +1,33 @@
+package Chapter8_Gui_Swing_Layout;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class ex02 extends JFrame {
+	public ex02() {
+		setTitle("Border Layout Example");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container c = getContentPane();
+		c.setLayout(new BorderLayout(5, 5));
+		
+		JPanel p = new JPanel(new GridLayout(2, 1));
+		JPanel p2 = new JPanel(new GridLayout(1,2));
+		
+		JButton b1 = new JButton("Test");
+		JButton b2 = new JButton("Test1");
+		JButton b3 = new JButton("Test2");
+		
+		p2.add(b2);
+		p2.add(b3);
+		
+		p.add(b1);
+		p.add(p2);
+		
+		c.add(p, BorderLayout.SOUTH);
+		setSize(300, 300);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new ex02();
+	}
+}

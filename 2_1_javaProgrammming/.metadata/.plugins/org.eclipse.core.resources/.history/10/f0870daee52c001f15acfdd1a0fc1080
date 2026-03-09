@@ -1,0 +1,12 @@
+package Chapter5_Extend_Override_Abstract_Interface;
+
+class MyPoint{
+	private int x, y;
+	protected MyPoint() {
+		x = 100; y = 200;
+	}
+}
+
+public class ex01 {
+
+}

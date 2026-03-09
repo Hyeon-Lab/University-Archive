@@ -1,0 +1,64 @@
+********** MiniC Compiler **********
+Lexical Analysis ...
+token1.kind = Token.FLOAT
+token1.lexeme = "float"
+token1.src_pos.StartLine = 1
+token1.src_pos.EndLine = 1
+token1.src_pos.StartCol = 1
+token1.src_pos.EndCol = 5
+
+token2.kind = Token.ID
+token2.lexeme = "c"
+token2.src_pos.StartLine = 1
+token2.src_pos.EndLine = 1
+token2.src_pos.StartCol = 7
+token2.src_pos.EndCol = 7
+
+token3.kind = Token.ASSIGN
+token3.lexeme = "="
+token3.src_pos.StartLine = 1
+token3.src_pos.EndLine = 1
+token3.src_pos.StartCol = 9
+token3.src_pos.EndCol = 9
+
+token4.kind = Token.FLOATLITERAL
+token4.lexeme = "1.2"
+token4.src_pos.StartLine = 1
+token4.src_pos.EndLine = 1
+token4.src_pos.StartCol = 11
+token4.src_pos.EndCol = 13
+
+token5.kind = Token.ID
+token5.lexeme = "e"
+token5.src_pos.StartLine = 1
+token5.src_pos.EndLine = 1
+token5.src_pos.StartCol = 14
+token5.src_pos.EndCol = 14
+
+token6.kind = Token.MINUS
+token6.lexeme = "-"
+token6.src_pos.StartLine = 1
+token6.src_pos.EndLine = 1
+token6.src_pos.StartCol = 15
+token6.src_pos.EndCol = 15
+
+token7.kind = Token.ID
+token7.lexeme = "xyz"
+token7.src_pos.StartLine = 1
+token7.src_pos.EndLine = 1
+token7.src_pos.StartCol = 16
+token7.src_pos.EndCol = 18
+
+token8.kind = Token.SEMICOLON
+token8.lexeme = ";"
+token8.src_pos.StartLine = 1
+token8.src_pos.EndLine = 1
+token8.src_pos.StartCol = 19
+token8.src_pos.EndCol = 19
+
+token9.kind = Token.EOF
+token9.lexeme = "$"
+token9.src_pos.StartLine = 2
+token9.src_pos.EndLine = 2
+token9.src_pos.StartCol = 1
+token9.src_pos.EndCol = 1

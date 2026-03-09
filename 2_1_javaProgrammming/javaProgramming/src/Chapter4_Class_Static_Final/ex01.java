@@ -1,0 +1,28 @@
+package Chapter4_Class_Static_Final;
+
+import java.util.Scanner;
+
+class Phone {
+	private String name, tel;
+	public Phone(String name, String tel) {
+		this.name = name;
+		this.tel = tel;
+	}
+	public String getName() { return name; }
+	public String getTel() { return tel; }
+}
+
+public class ex01 {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("이름과 전화번호 입력 >> ");
+		Phone p1 = new Phone(s.next(), s.next());
+		
+		System.out.print("이름과 전화번호 입력 >> ");
+		Phone p2 = new Phone(s.next(), s.next());
+		
+		System.out.println(p1.getName() + "의 번호 " + p1.getTel());
+		System.out.println(p2.getName() + "의 번호 " + p2.getTel());
+	}
+}

@@ -1,0 +1,59 @@
+********** MiniC Compiler **********
+Lexical Analysis ...
+token1.kind = Token.ID
+token1.lexeme = "print"
+token1.src_pos.StartLine = 1
+token1.src_pos.EndLine = 1
+token1.src_pos.StartCol = 1
+token1.src_pos.EndCol = 5
+
+token2.kind = Token.LEFTPAREN
+token2.lexeme = "("
+token2.src_pos.StartLine = 1
+token2.src_pos.EndLine = 1
+token2.src_pos.StartCol = 6
+token2.src_pos.EndCol = 6
+
+ERROR: unterminated string literal
+token3.kind = Token.STRINGLITERAL
+token3.lexeme = "year=2025"
+token3.src_pos.StartLine = 1
+token3.src_pos.EndLine = 1
+token3.src_pos.StartCol = 7
+token3.src_pos.EndCol = 16
+
+token4.kind = Token.ID
+token4.lexeme = "t"
+token4.src_pos.StartLine = 2
+token4.src_pos.EndLine = 2
+token4.src_pos.StartCol = 1
+token4.src_pos.EndCol = 1
+
+token5.kind = Token.ASSIGN
+token5.lexeme = "="
+token5.src_pos.StartLine = 2
+token5.src_pos.EndLine = 2
+token5.src_pos.StartCol = 2
+token5.src_pos.EndCol = 2
+
+token6.kind = Token.INTLITERAL
+token6.lexeme = "3"
+token6.src_pos.StartLine = 2
+token6.src_pos.EndLine = 2
+token6.src_pos.StartCol = 3
+token6.src_pos.EndCol = 3
+
+token7.kind = Token.SEMICOLON
+token7.lexeme = ";"
+token7.src_pos.StartLine = 2
+token7.src_pos.EndLine = 2
+token7.src_pos.StartCol = 4
+token7.src_pos.EndCol = 4
+
+ERROR: unterminated multi-line comment.
+token8.kind = Token.EOF
+token8.lexeme = "$"
+token8.src_pos.StartLine = 4
+token8.src_pos.EndLine = 4
+token8.src_pos.StartCol = 1
+token8.src_pos.EndCol = 1

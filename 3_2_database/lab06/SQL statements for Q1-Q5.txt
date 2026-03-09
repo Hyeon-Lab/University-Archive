@@ -1,0 +1,31 @@
+#Q1
+
+-- select nickname
+-- from favorite_course
+-- where course = 'Sleep'
+
+#Q2
+
+-- select C.nickname, C.direction
+-- from career_path C, mbti M
+-- where C.nickname = M.nickname and M.mbti_type  = 'ESTJ'
+
+#Q3
+
+-- select  M.nickname
+-- from mbti M, favorite_course F
+-- where M.nickname = F.nickname and M.gender = 'male' and (F.course = 'CA' or F.course = 'SE')
+
+#Q4
+
+-- select S.nickname 
+-- from student S, preferred_pl P1, preferred_pl P2
+-- where S.nickname  = P1.nickname and P1.nickname  = P2.nickname
+-- and S.section = '003' and P1.lang = 'java' and P2.lang = 'C++'
+
+#Q5
+
+-- select distinct F.food 
+-- from favorite_food F, mbti M
+-- where F.nickname = M.nickname  and M.mbti_type = 'ENTJ'
+-- order by F.food asc

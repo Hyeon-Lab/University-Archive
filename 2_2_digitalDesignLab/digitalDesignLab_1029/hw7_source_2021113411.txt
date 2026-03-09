@@ -1,0 +1,89 @@
+module BCDtoSevenSeg(A, B, C, D, E, F, G, BCDIn);
+output A, B, C, D, E, F, G;
+input [3:0]BCDIn;
+
+reg A, B, C, D, E, F, G;
+
+always @(BCDIn)
+    SevenSeg;
+
+task SevenSeg;
+begin
+    A = 1'b0; B = 1'b0; C = 1'b0; D = 1'b0; E = 1'b0; F = 1'b0; G = 1'b0;
+    if(BCDIn == 4'b0000)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b1; D = 1'b1; E = 1'b1; F = 1'b1; G = 1'b0;
+    end
+    else if(BCDIn == 4'b0001)
+    begin
+        A = 1'b0; B = 1'b1; C = 1'b1; D = 1'b0; E = 1'b0; F = 1'b0; G = 1'b0;
+    end
+    else if(BCDIn == 4'b0010)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b0; D = 1'b1; E = 1'b1; F = 1'b0; G = 1'b1;
+    end
+    else if(BCDIn == 4'b0011)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b1; D = 1'b1; E = 1'b0; F = 1'b0; G = 1'b1;
+    end
+    else if(BCDIn == 4'b0100)
+    begin
+        A = 1'b0; B = 1'b1; C = 1'b1; D = 1'b0; E = 1'b0; F = 1'b1; G = 1'b1;
+    end
+    else if(BCDIn == 4'b0101)
+    begin
+        A = 1'b1; B = 1'b0; C = 1'b1; D = 1'b1; E = 1'b0; F = 1'b1; G = 1'b1;
+    end
+    else if(BCDIn == 4'b0110)
+    begin
+        A = 1'b1; B = 1'b0; C = 1'b1; D = 1'b1; E = 1'b1; F = 1'b1; G = 1'b1;
+    end
+    else if(BCDIn == 4'b0111)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b1; D = 1'b0; E = 1'b0; F = 1'b0; G = 1'b0;
+    end
+    else if(BCDIn == 4'b1000)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b1; D = 1'b1; E = 1'b1; F = 1'b1; G = 1'b1;
+    end
+    else if(BCDIn == 4'b1001)
+    begin
+        A = 1'b1; B = 1'b1; C = 1'b1; D = 1'b1; E = 1'b0; F = 1'b1; G = 1'b1;
+    end
+    else
+    begin
+        A = 1'b0; B = 1'b0; C = 1'b0; D = 1'b0; E = 1'b0; F = 1'b0; G = 1'b0;
+    end
+end
+endtask
+endmodule
+    
+    
+module Top;
+
+wire a, b, c, d, e, f, g;
+reg [3:0]bcdin;
+
+BCDtoSevenSeg bcdtoseven(.A(a), .B(b), .C(c), .D(d), .E(e), .F(f), .G(g), .BCDIn(bcdin));
+
+  initial 
+  begin
+  $monitor($time, " BCDIn = %b -> a=%d, b=%d, c=%d, d=%d, e=%d, f=%d, g=%d", bcdin, a, b, c, d, e, f, g);
+  end
+  
+  integer i;
+  
+  initial
+  begin
+    input_bcdin;
+  end
+  
+  task input_bcdin;
+    begin
+        bcdin = 4'b0000;
+        for(i = 1; i < 16; i = i + 1)
+            #10 bcdin = i;
+        #10 bcdin = 4'b0000;
+    end
+  endtask
+endmodule

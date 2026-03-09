@@ -1,0 +1,12 @@
+package Chapter7_Vector_ArrayList_HashMap_Iterator_Generic;
+
+import java.util.*;
+
+public class ex02 {
+	public static void main(String[] args) {
+		
+		while(true) {
+			System.out.print("삽입:1, 삭제:2, 찾기:3, 전체:4, 종료:5 -->");
+		}
+	}
+}
